@@ -118,7 +118,7 @@ class App extends React.Component<{}, {loading: boolean, city: string, country: 
                 <div className="App-weather-today-header">Today</div>
                 <div className="App-weather-today-graphic-body">
                   <div className="App-weather-today-icon">
-                    <img src={`https://www.weatherbit.io/static/img/icons/${this.state.weatherData?.data?.[0]?.weather?.icon}.png`} />
+                    <img alt="Today's Weather" src={`https://www.weatherbit.io/static/img/icons/${this.state.weatherData?.data?.[0]?.weather?.icon}.png`} />
                   </div>
                   <div className="App-weather-stats-body">
                     <div className="App-weather-today-temperature">{this.state.weatherData?.data?.[0]?.temp}&deg;</div>
@@ -130,7 +130,7 @@ class App extends React.Component<{}, {loading: boolean, city: string, country: 
                 {this.state.forecastData?.data?.slice(1, 5).map((day: any, index: number) => (
                   <div key={index} className="App-weather-week-day-body">
                     <div className="App-weather-week-day-header">{day?.weekday}</div>
-                    <div className="App-weather-week-day-icon"><img src={`https://www.weatherbit.io/static/img/icons/${day?.weather?.icon}.png`} /></div>
+                    <div className="App-weather-week-day-icon"><img alt="Weekly" src={`https://www.weatherbit.io/static/img/icons/${day?.weather?.icon}.png`} /></div>
                     <div className="App-weather-week-day-temperature">{day?.temp}&deg;</div>
                   </div>
                 ))}
