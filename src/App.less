@@ -1,0 +1,121 @@
+@white: #FFFFFF;
+@lightBlue: #eef6fb;
+
+body {
+    background-color: @lightBlue;
+    
+    .App {
+        text-align: center;
+        max-width: 600px;
+        margin: auto;
+    
+        .App-tabs {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+    
+            .App-tab {
+                color: #313137;
+                padding: 24px;
+                font-weight: lighter;
+                font-size: 28px;
+                cursor: pointer;
+                text-transform: uppercase;
+    
+                &.active {
+                    font-weight: bold;
+                    color: #5eafe8;
+                }
+            }
+        }
+
+        .App-weather-body {
+            border-radius: 10px;
+            background-color: @white;
+            padding: 4px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 16px #cecece;
+
+            .App-weather-today-body {
+                background-color: @lightBlue;
+                border-radius: 10px 10px 0 0;
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 4px;
+
+                .App-weather-today-header {
+                    font-size: 24px;
+                    font-weight: lighter;
+                }
+
+                .App-weather-today-graphic-body {
+                    display: flex;
+                    align-items: center;
+                    
+                    .App-weather-today-icon {
+                        margin-right: 16px;
+                    }
+
+                    .App-weather-stats-body {
+                        display: flex;
+                        flex-direction: column;
+                        text-align: left;
+
+                        .App-weather-today-temperature {
+                            font-size: 36px;
+                            font-weight: bold;
+                        }
+
+                        .App-weather-today-description {
+                            font-weight: lighter;
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+
+            .App-weather-week-body {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                grid-gap: 4px;
+
+                .App-weather-week-day-body {
+                    border-radius: 0 0 0 0;
+                    background-color: @lightBlue;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 16px 0;
+
+                    &:first-child {
+                        border-radius: 0 0 0 10px;
+                    }
+                    &:last-child {
+                        border-radius: 0 0 10px 0;
+                    }
+
+                    .App-weather-week-day-header {
+                        font-weight: lighter;
+                        font-size: 24px;
+                    }
+
+                    .App-weather-week-day-temperature {
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .App-loading-state {
+                width: 100%;
+                text-align: center;;
+                padding: 40px 0;
+                font-size: 24px;
+                font-weight: lighter;
+            }
+        }
+    }
+}
